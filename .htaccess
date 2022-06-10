@@ -1,0 +1,39 @@
+
+ErrorDocument 400 https://bimash.com.np/Error/400
+ErrorDocument 401 https://bimash.com.np/Error/401
+ErrorDocument 403 https://bimash.com.np/Error/403
+ErrorDocument 404 https://bimash.com.np/Error/404
+ErrorDocument 503 https://bimash.com.np/Error/503
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+RewriteRule ^(.*)$ $1.html [NC,L]
+RewriteRule ^Home  index.php [NC,L]
+RewriteRule ^Appointment  appointment.php [NC,L]
+RewriteRule ^Doctors  doctors.php [NC,L]
+RewriteRule ^Users  user.php [NC,L]
+RewriteRule ^Health  healthpackage.php [NC,L]
+RewriteRule ^Payment  payment.php [NC,L]
+RewriteRule ^Medical  medical.php [NC,L]
+RewriteRule ^Login  login.php [NC,L]
+RewriteRule ^Logout  logout.php [NC,L]
+RewriteRule ^Profile  profile.php [NC,L]
+RewriteRule ^ResetPW  resetpw.php [NC,L]
+
+
+
+
+
+
+
+    
+
+RewriteRule ^400  400.html [NC,L]
+RewriteRule ^401  401.html [NC,L]
+RewriteRule ^403  403.html [NC,L]
+RewriteRule ^404  404.html [NC,L]
+RewriteRule ^503  503.html [NC,L]
